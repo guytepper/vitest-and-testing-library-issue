@@ -8,10 +8,10 @@ if (import.meta.vitest) {
 
   it("renders", async () => {
     render(<Component />);
-    // console.log(
-    //   "One: textContent = " +
-    //     document.querySelector('[data-testid="comp"]').textContent
-    // );
+    console.log(
+      "One: textContent = " +
+        document.querySelector('[data-testid="comp"]').textContent
+    );
     const comp = await screen.findByTestId("comp");
     expect(comp).toHaveTextContent("One");
   });
